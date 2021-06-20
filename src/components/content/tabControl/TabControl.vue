@@ -26,7 +26,8 @@ export default {
     },
     methods: {
         itemclick(index) {
-            this.currentIndex = index
+            this.currentIndex = index,
+            this.$emit('tabClick',index)
         }
     }
 }
@@ -42,6 +43,7 @@ export default {
     }
     .tab-control-item {
         flex: 1;
+        background-color: rgb(255, 255, 255);
     }
     .tab-control-item span {
         padding: 5px;
